@@ -1,0 +1,36 @@
+table{
+  background-color: #AEBDCA ;
+  line-height: 15px;
+
+}
+.table-container {
+  overflow-x: auto;
+  padding: 10px;
+
+}
+
+.navbar {
+  width: auto;
+}
+
+mat-row:hover{
+  background-color: lightslategray;
+}
+ /* Adjust the scrollbar width for small screens */
+ ::-webkit-scrollbar {
+   width: 0.1em;
+ }
+
+ ::-webkit-scrollbar-track {
+   background: transparent;
+ }
+
+ ::-webkit-scrollbar-thumb {
+   background: transparent;
+ }
+input,input:hover,input:focus{
+  background-color: lightslategray;
+  border: none;
+  max-width:80vh;
+
+}

@@ -1,0 +1,82 @@
+<nav class="navbar" style="background-color: #AEBDCA;">
+  <div class="container-fluid">
+    <a class="navbar-brand"><img src="../../../assets/logo-no-background.png" style="height:40px;width:100px;padding-left:10px;"></a>
+    <form class="d-flex" role="search">
+      <input matInput #input (keyup)="applyFilter($event)" class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" [(ngModel)]="term">
+    </form>
+  </div>
+</nav>
+
+<div class="row align-items-end justify-content-between m-2 pb-2 g-3">
+  <div class="col-auto">
+  </div>
+  <div class="col-12 col-md-auto">
+    <div class="row g-2">
+      <div class="col-auto flex-1">
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="table-container mat-elevation-z8 m-2">
+
+  <table  matSort mat-table [dataSource]="dataSource" >
+    <!-- Position Column -->
+    <ng-container matColumnDef="id" >
+      <mat-header-cell *matHeaderCellDef    scope="col"> Id. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="firstName">
+      <mat-header-cell *matHeaderCellDef   scope="col" data-sort="product" > First Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.firstName}} </mat-cell>
+    </ng-container>
+<!-- Last Name Column -->
+<ng-container matColumnDef="lastName">
+  <mat-header-cell *matHeaderCellDef    scope="col"> Last Name </mat-header-cell>
+  <mat-cell *matCellDef="let element"> {{element.lastName}} </mat-cell>
+</ng-container>
+<!--  Age Column -->
+<ng-container matColumnDef="age">
+  <mat-header-cell *matHeaderCellDef mat-sort-header    scope="col" > Age&nbsp;<i class="fa fa-sort"></i> </mat-header-cell>
+  <mat-cell *matCellDef="let element"> {{element.age}} </mat-cell>
+</ng-container>
+
+<!--  Dob Column -->
+<ng-container matColumnDef="dob">
+  <mat-header-cell *matHeaderCellDef    scope="col"> Dob </mat-header-cell>
+  <mat-cell *matCellDef="let element"> {{element.dob}} </mat-cell>
+</ng-container>
+
+<!--  Email Column -->
+<ng-container matColumnDef="email">
+  <mat-header-cell *matHeaderCellDef    scope="col"> Email </mat-header-cell>
+  <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+</ng-container>
+    <!-- Salary Column -->
+    <ng-container matColumnDef="salary">
+      <mat-header-cell *matHeaderCellDef    scope="col"> Salary </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.salary}} </mat-cell>
+    </ng-container>
+
+    <!-- Address Column -->
+    <ng-container matColumnDef="address">
+      <mat-header-cell *matHeaderCellDef    scope="col"> Address </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+    </ng-container>
+
+            <!-- Contact Number Column -->
+            <ng-container matColumnDef="contactNumber">
+              <mat-header-cell *matHeaderCellDef    scope="col"> Contact Number </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.contactNumber}} </mat-cell>
+            </ng-container>
+
+
+    <mat-header-row  style="background-color:lightslategrey;"*matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </table>
+
+  <mat-paginator class="paginator " [pageSizeOptions]="[10]" showFirstLastButtons aria-label="Select page of periodic elements" style="font-weight: bold;">
+  </mat-paginator>
+</div>
