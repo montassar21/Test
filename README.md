@@ -1,8 +1,10 @@
 # Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
-Node version : 18.17.0
-npm version : 9.6.7
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version <b>16.2.2</b>.
+<br>
+Node version : <b>18.17.0</b>.
+<br>
+npm version : <b>9.6.7</b>.
 
 ## Development server
 
